@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(HelloOpenGL VERSION 1.0.0 LANGUAGES C)
+project(HelloOpenGL VERSION 1.0.0)
 
 # Add source files
-file(GLOB_RECURSE SOURCE_FILES "src/*.c")
+file(GLOB_RECURSE SOURCE_FILES "src/*.cpp")
 
 # Add header files
 include_directories(include)
