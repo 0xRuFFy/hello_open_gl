@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <stdbool.h>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <iostream>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glViewport(0, 0, width, height);
@@ -15,7 +14,7 @@ void processInput(GLFWwindow* window) {
 int main() {
     // Initialize GLFW
     if (!glfwInit()) {
-		printf("Failed to initialize GLFW\n");
+        std::cerr << "Failed to initialize GLFW\n";
         return -1;
     }
 
@@ -27,7 +26,7 @@ int main() {
     // Create a GLFW windowed mode window and its OpenGL context
     GLFWwindow* window = glfwCreateWindow(800, 600, "OpenGL Project", NULL, NULL);
     if (!window) {
-		printf("Failed to create GLFW window\n");
+        std::cerr << "Failed to create GLFW window\n";
         glfwTerminate();
         return -1;
     }
@@ -37,7 +36,7 @@ int main() {
 
     // Initialize GLAD: Must be done after GLFW context creation
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-		printf("Failed to initialize GLAD\n");
+        std::cerr << "Failed to initialize GLAD\n";
         return -1;
     }
 
